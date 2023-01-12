@@ -1,0 +1,13 @@
+server:
+  port: 8089
+rabbit-config:
+  host: "localhost"
+  port: 5672 # 15672
+  username: user
+  password: password
+  exchange:
+    - name: "poc-exchange-direct"
+      type: "direct"
+      binding:
+        - queue: "q1"
+          route: "route1"
